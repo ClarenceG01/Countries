@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: var(--very-dark-blue);
+  font-family: "Nunito Sans", sans-serif;
+  height: 100%;
+}
+.navbar {
+  color: var(--white);
+  background-color: var(--dark-blue);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  height: fit-content;
+  padding: 0 2%;
+}
+.navbar .title {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.dark-mode {
+  width: 12%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.dark-mode i {
+  margin-right: 0.5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+}
+.container {
+  margin: 2% 5% 5% 5%;
+}
+.countries {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+.flag {
+  width: 100%;
+  height: 60%;
+}
+.flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: cover;
+}
+.country-card {
+  width: 90%;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.country-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.country-info {
+  padding: 1rem;
+}
+.country-name {
+  margin: 2.5% 0;
+}
+.country-name .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.title {
+  font-weight: 400;
+}
+.value {
+  opacity: 0.8;
+}
+@media (max-width: 1400px) {
+  .countries {
+    grid-template-columns: repeat(3, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 900px) {
+  .countries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  .countries {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
