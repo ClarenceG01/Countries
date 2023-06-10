@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="title">Where in the world?</div>
       <div className="dark-mode">
-        <i class="fa-solid fa-moon"></i>
+        <i className="fas fa-moon"></i>
         <p>Dark mode</p>
       </div>
     </div>
