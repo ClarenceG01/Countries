@@ -17,7 +17,7 @@ const myRouter = createBrowserRouter(
       <Route path="/" element={<Homepage />}>
         <Route path="/" element={<Countries />} />
       </Route>
-      <Route path="/country-details" element={<CountryDetails />} />
+      <Route path="/country-details/:countryName" element={<CountryDetails />} />
     </Route>
   )
 );
